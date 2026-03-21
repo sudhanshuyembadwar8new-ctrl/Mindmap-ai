@@ -1,0 +1,162 @@
+export const themes = {
+  dark: {
+    name: 'Dark',
+    icon: '🌙',
+    colors: {
+      '--bg-primary': '#0a0a0f',
+      '--bg-secondary': '#12121a',
+      '--bg-elevated': '#1a1a26',
+      '--bg-canvas': '#08080d',
+      '--text-primary': '#e8e8f0',
+      '--text-secondary': '#8888a0',
+      '--text-muted': '#55556a',
+      '--border': '#2a2a3a',
+      '--border-hover': '#3a3a50',
+      '--accent': '#6366f1',
+      '--accent-hover': '#818cf8',
+      '--accent-muted': 'rgba(99,102,241,0.15)',
+      '--node-bg': '#1a1a26',
+      '--node-border': '#2a2a3a',
+      '--node-shadow': 'rgba(0,0,0,0.4)',
+      '--edge-color': '#3a3a50',
+      '--success': '#10b981',
+      '--warning': '#f59e0b',
+      '--danger': '#ef4444',
+    }
+  },
+  neon: {
+    name: 'Neon',
+    icon: '⚡',
+    colors: {
+      '--bg-primary': '#0d0015',
+      '--bg-secondary': '#150025',
+      '--bg-elevated': '#1f0035',
+      '--bg-canvas': '#0a0010',
+      '--text-primary': '#f0e6ff',
+      '--text-secondary': '#b388ff',
+      '--text-muted': '#7c4dff',
+      '--border': '#6200ea',
+      '--border-hover': '#7c4dff',
+      '--accent': '#e040fb',
+      '--accent-hover': '#ea80fc',
+      '--accent-muted': 'rgba(224,64,251,0.15)',
+      '--node-bg': '#1f0035',
+      '--node-border': '#6200ea',
+      '--node-shadow': 'rgba(224,64,251,0.2)',
+      '--edge-color': '#7c4dff',
+      '--success': '#00e676',
+      '--warning': '#ffea00',
+      '--danger': '#ff1744',
+    }
+  },
+  ocean: {
+    name: 'Ocean',
+    icon: '🌊',
+    colors: {
+      '--bg-primary': '#0a1628',
+      '--bg-secondary': '#0f1f35',
+      '--bg-elevated': '#152840',
+      '--bg-canvas': '#081220',
+      '--text-primary': '#e0f0ff',
+      '--text-secondary': '#7dbaec',
+      '--text-muted': '#4a8ac0',
+      '--border': '#1e3a5f',
+      '--border-hover': '#2a5080',
+      '--accent': '#0ea5e9',
+      '--accent-hover': '#38bdf8',
+      '--accent-muted': 'rgba(14,165,233,0.15)',
+      '--node-bg': '#152840',
+      '--node-border': '#1e3a5f',
+      '--node-shadow': 'rgba(14,165,233,0.15)',
+      '--edge-color': '#2a5080',
+      '--success': '#2dd4bf',
+      '--warning': '#fbbf24',
+      '--danger': '#f87171',
+    }
+  },
+  forest: {
+    name: 'Forest',
+    icon: '🌲',
+    colors: {
+      '--bg-primary': '#0a1510',
+      '--bg-secondary': '#0f1f18',
+      '--bg-elevated': '#152820',
+      '--bg-canvas': '#08120d',
+      '--text-primary': '#e0f5ea',
+      '--text-secondary': '#7dcc9a',
+      '--text-muted': '#4a9a6a',
+      '--border': '#1e4a35',
+      '--border-hover': '#2a6048',
+      '--accent': '#10b981',
+      '--accent-hover': '#34d399',
+      '--accent-muted': 'rgba(16,185,129,0.15)',
+      '--node-bg': '#152820',
+      '--node-border': '#1e4a35',
+      '--node-shadow': 'rgba(16,185,129,0.15)',
+      '--edge-color': '#2a6048',
+      '--success': '#34d399',
+      '--warning': '#fbbf24',
+      '--danger': '#f87171',
+    }
+  },
+  minimal: {
+    name: 'Minimal',
+    icon: '◻️',
+    colors: {
+      '--bg-primary': '#18181b',
+      '--bg-secondary': '#1f1f23',
+      '--bg-elevated': '#27272b',
+      '--bg-canvas': '#141417',
+      '--text-primary': '#fafafa',
+      '--text-secondary': '#a1a1aa',
+      '--text-muted': '#71717a',
+      '--border': '#2e2e35',
+      '--border-hover': '#3f3f46',
+      '--accent': '#a1a1aa',
+      '--accent-hover': '#d4d4d8',
+      '--accent-muted': 'rgba(161,161,170,0.15)',
+      '--node-bg': '#27272b',
+      '--node-border': '#2e2e35',
+      '--node-shadow': 'rgba(0,0,0,0.3)',
+      '--edge-color': '#3f3f46',
+      '--success': '#4ade80',
+      '--warning': '#fbbf24',
+      '--danger': '#f87171',
+    }
+  },
+  light: {
+    name: 'Light',
+    icon: '☀️',
+    colors: {
+      '--bg-primary': '#ffffff',
+      '--bg-secondary': '#f8f9fa',
+      '--bg-elevated': '#f1f3f5',
+      '--bg-canvas': '#fafbfc',
+      '--text-primary': '#1a1a2e',
+      '--text-secondary': '#4a4a6a',
+      '--text-muted': '#8888a0',
+      '--border': '#e2e4e8',
+      '--border-hover': '#c8ccd0',
+      '--accent': '#6366f1',
+      '--accent-hover': '#4f46e5',
+      '--accent-muted': 'rgba(99,102,241,0.1)',
+      '--node-bg': '#ffffff',
+      '--node-border': '#e2e4e8',
+      '--node-shadow': 'rgba(0,0,0,0.08)',
+      '--edge-color': '#c8ccd0',
+      '--success': '#059669',
+      '--warning': '#d97706',
+      '--danger': '#dc2626',
+    }
+  }
+};
+
+export function applyTheme(themeName) {
+  const theme = themes[themeName];
+  if (!theme) return;
+
+  const root = document.documentElement;
+  Object.entries(theme.colors).forEach(([prop, value]) => {
+    root.style.setProperty(prop, value);
+  });
+}
