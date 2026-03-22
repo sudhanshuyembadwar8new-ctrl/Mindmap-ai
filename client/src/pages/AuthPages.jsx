@@ -8,20 +8,31 @@ export function LoginPage() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [coldStart, setColdStart] = useState(false);
   const { login } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email || !password) return;
+    
     setLoading(true);
     setError(null);
+    setColdStart(false);
+    
+    const coldTimer = setTimeout(() => {
+      setColdStart(true);
+    }, 5000);
+
     try {
       await login(email, password);
+      clearTimeout(coldTimer);
       navigate('/dashboard');
     } catch (err) {
+      clearTimeout(coldTimer);
       setError(err.response?.data?.message || 'Failed to login');
     } finally {
+      clearTimeout(coldTimer);
       setLoading(false);
     }
   };
@@ -38,6 +49,7 @@ export function LoginPage() {
         <p className="auth-sub">Log in to your account</p>
         
         {error && <div className="auth-error">{error}</div>}
+        {coldStart && !error && <div className="auth-info" style={{ color: '#ec4899', fontSize: '0.9rem', marginBottom: '1rem', textAlign: 'center' }}>Connecting to server... (Please wait up to 50s for free tier cold start)</div>}
         
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="input-group">
@@ -79,20 +91,31 @@ export function SignupPage() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [coldStart, setColdStart] = useState(false);
   const { signup } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!name || !email || !password) return;
+    
     setLoading(true);
     setError(null);
+    setColdStart(false);
+
+    const coldTimer = setTimeout(() => {
+      setColdStart(true);
+    }, 5000);
+
     try {
       await signup(name, email, password);
+      clearTimeout(coldTimer);
       navigate('/dashboard');
     } catch (err) {
+      clearTimeout(coldTimer);
       setError(err.response?.data?.message || 'Failed to sign up');
     } finally {
+      clearTimeout(coldTimer);
       setLoading(false);
     }
   };
@@ -109,6 +132,7 @@ export function SignupPage() {
         <p className="auth-sub">Start mapping your brilliant ideas</p>
         
         {error && <div className="auth-error">{error}</div>}
+        {coldStart && !error && <div className="auth-info" style={{ color: '#ec4899', fontSize: '0.9rem', marginBottom: '1rem', textAlign: 'center' }}>Connecting to server... (Please wait up to 50s for free tier cold start)</div>}
         
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="input-group">

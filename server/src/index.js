@@ -13,11 +13,7 @@ const app = express();
 connectDB().catch(() => console.log('DB failed, continuing without DB'));
 
 app.use(cors({
-  origin: [
-    'http://localhost:5173',
-    'http://localhost:5174',
-    'https://mindmap-ai-iota.vercel.app'
-  ],
+  origin: 'https://mindmap-ai-iota.vercel.app',
   credentials: true
 }));
 
@@ -29,6 +25,7 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/maps', require('./routes/maps'));
 app.use('/api', require('./routes/ai'));
 
-app.listen(process.env.PORT || 5001, () => {
-  console.log(`Server running on port ${process.env.PORT || 5001}`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log("Running on " + PORT);
 });
