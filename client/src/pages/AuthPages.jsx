@@ -20,7 +20,7 @@ export function LoginPage() {
       await login(email, password);
       navigate('/dashboard');
     } catch (err) {
-      setError(err.response?.data?.error || 'Failed to login');
+      setError(err.response?.data?.message || 'Failed to login');
     } finally {
       setLoading(false);
     }
@@ -91,7 +91,7 @@ export function SignupPage() {
       await signup(name, email, password);
       navigate('/dashboard');
     } catch (err) {
-      setError(err.response?.data?.error || 'Failed to sign up');
+      setError(err.response?.data?.message || 'Failed to sign up');
     } finally {
       setLoading(false);
     }

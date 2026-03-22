@@ -8,10 +8,10 @@ const cors = require('cors');
 const connectDB = require('./config/db');
 
 const app = express();
-connectDB();
+connectDB().catch(() => console.log('DB failed, continuing without DB'));
 
 app.use(cors({
-  origin: function (origin, callback) {
+  origin: ['http://localhost:5173', 'http://localhost:5174', 'https://mindmap-ai-iota.vercel.app'],
     // Allow requests with no origin (curl, mobile, etc)
     if (!origin) return callback(null, true);
     // Allow any localhost or 127.0.0.1 origin
