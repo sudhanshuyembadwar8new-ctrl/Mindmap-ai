@@ -23,7 +23,7 @@ app.use(cors({
 
 app.use(express.json());
 
-app.get('/api/health', (req, res) => res.json({ status: 'ok', uptime: process.uptime() }));
+app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/maps', require('./routes/maps'));
@@ -32,11 +32,3 @@ app.use('/api', require('./routes/ai'));
 app.listen(process.env.PORT || 5001, () => {
   console.log(`Server running on port ${process.env.PORT || 5001}`);
 });
-```
-
-**Ctrl+S** → then push:
-```
-cd C:\Users\Sudhanshu\.agent\mindmap-ai
-git add .
-git commit -m "fix: clean CORS setup"
-git push origin main
