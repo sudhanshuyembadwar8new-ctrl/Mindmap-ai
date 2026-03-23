@@ -148,7 +148,7 @@ St. Vincent Pallotti College of Engineering, Nagpur
 
 > Built this entire product in one intensive session as a first year engineering student — from zero to a live, deployed, AI-powered web product.
 
----
+---*
 
 ## 🔗 Links
 
