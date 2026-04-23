@@ -16,7 +16,7 @@ Whether you're a student trying to understand a complex topic, a professional br
 ---
 
 ## ✨ Features
-
+                                       
 - **AI Generation** — Type any topic, get a full mind map in 2-3 seconds
 - **3 Modes** — Study, Brainstorm, and Plan modes for different use cases
 - **Expand Nodes** — Click any node and AI expands it infinitely deeper
