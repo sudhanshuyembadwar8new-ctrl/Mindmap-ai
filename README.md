@@ -20,7 +20,7 @@ Whether you're a student trying to understand a complex topic, a professional br
 - **AI Generation** — Type any topic, get a full mind map in 2-3 seconds
 - **3 Modes** — Study, Brainstorm, and Plan modes for different use cases
 - **Expand Nodes** — Click any node and AI expands it infinitely deeper
-- **Node Chat** — Ask AI anything about a specific node
+- **Node Chat** — Ask AI anything about a specific node                    
 - **Import Notes** — Paste text or upload PDF, get an instant mind map
 - **6 Themes** — Dark, Neon, Ocean, Forest, Minimal, Light
 - **Export** — Download as PNG or PDF
