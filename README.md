@@ -51,15 +51,15 @@ User → Vercel (React Frontend)
          ↓
     Render (Node.js Backend)
          ↓
-    MongoDB Atlas (Database)
-         ↓
-    Gemini Flash API (AI Generation)
-```
-
+    MongoDB Atlas (Database)                          
+         ↓                        
+    Gemini Flash API (AI Generation)                      
+```                     
+                              
 ---
 
 ## 💪 Challenges & How We Solved Them
-
+               
 Building this product was not easy. Here's what we faced and how we fought through it:
 
 ### 🔴 MongoDB DNS Resolution Failure
@@ -71,24 +71,24 @@ Building this product was not easy. Here's what we faced and how we fought throu
 **Solution:** Created multiple API keys across Google accounts, switched to `gemini-2.0-flash-lite` model for better free tier limits, and rotated keys strategically.
 
 ### 🔴 CORS Blocking on Production
-**Problem:** After deploying backend to Render and frontend to Vercel, all API calls were blocked by CORS policy.  
-**Solution:** Updated server CORS config to explicitly allow the Vercel domain alongside localhost origins.
+**Problem:** After deploying backend to Render and frontend to Vercel, all API calls were blocked by CORS policy.                     
+**Solution:** Updated server CORS config to explicitly allow the Vercel domain alongside localhost origins.          
 
 ### 🔴 Environment Variables Not Loading
-**Problem:** `dotenv` wasn't finding `.env` file because `index.js` runs from `src/` subfolder, making relative paths wrong.  
-**Solution:** Used `path.resolve(__dirname, '../.env')` to correctly point to the parent directory.
+**Problem:** `dotenv` wasn't finding `.env` file because `index.js` runs from `src/` subfolder, making relative paths wrong.                             
+**Solution:** Used `path.resolve(__dirname, '../.env')` to correctly point to the parent directory.                    
 
 ### 🔴 Antigravity Token Limits
 **Problem:** AI coding assistant token limits ran out mid-build, stopping all progress for days.  
-**Solution:** Split work across multiple tools — Claude.ai for architecture and debugging, Antigravity for building, local Ollama for testing. Never stopped building.
+**Solution:** Split work across multiple tools — Claude.ai for architecture and debugging, Antigravity for building, local Ollama for testing. Never stopped building.                
 
 ### 🔴 Port Conflicts
-**Problem:** Multiple Node.js processes running on same port caused `EADDRINUSE` errors constantly.  
-**Solution:** Used `Get-Process -Name "node" | Stop-Process -Force` to kill all processes before restarting.
-
+**Problem:** Multiple Node.js processes running on same port caused `EADDRINUSE` errors constantly.                                
+**Solution:** Used `Get-Process -Name "node" | Stop-Process -Force` to kill all processes before restarting.         
+          
 ### 🔴 Auth Flow Breaking on Live Site  
-**Problem:** Login and signup worked locally but failed on production due to API URL mismatch (`localhost` vs `127.0.0.1`).  
-**Solution:** Standardized all API URLs to use `localhost` and set `VITE_API_URL` environment variable in Vercel pointing to Render backend.
+**Problem:** Login and signup worked locally but failed on production due to API URL mismatch (`localhost` vs `127.0.0.1`).                                    
+**Solution:** Standardized all API URLs to use `localhost` and set `VITE_API_URL` environment variable in Vercel pointing to Render backend.                            
 
 ---
 
