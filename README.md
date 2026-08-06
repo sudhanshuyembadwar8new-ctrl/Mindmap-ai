@@ -14,24 +14,24 @@ MindMap AI is a full-stack AI-powered product that lets you type any topic and i
 Whether you're a student trying to understand a complex topic, a professional brainstorming ideas, or a creator planning content — MindMap AI turns any topic into a visual, expandable knowledge map in seconds.
 
 ---
-
-## ✨ Features
+              
+## ✨ Features                                 
                                        
-- **AI Generation** — Type any topic, get a full mind map in 2-3 seconds
-- **3 Modes** — Study, Brainstorm, and Plan modes for different use cases
-- **Expand Nodes** — Click any node and AI expands it infinitely deeper
+- **AI Generation** — Type any topic, get a full mind map in 2-3 seconds               
+- **3 Modes** — Study, Brainstorm, and Plan modes for different use cases                
+- **Expand Nodes** — Click any node and AI expands it infinitely deeper                     
 - **Node Chat** — Ask AI anything about a specific node                    
-- **Import Notes** — Paste text or upload PDF, get an instant mind map
-- **6 Themes** — Dark, Neon, Ocean, Forest, Minimal, Light
+- **Import Notes** — Paste text or upload PDF, get an instant mind map                
+- **6 Themes** — Dark, Neon, Ocean, Forest, Minimal, Light                  
 - **Export** — Download as PNG or PDF
-- **Share** — Generate a public share link for any map
-- **Present Mode** — Walk through branches like a presentation
+- **Share** — Generate a public share link for any map               
+- **Present Mode** — Walk through branches like a presentation                        
 - **Save Maps** — All your maps saved to your dashboard
-- **Auth System** — Secure signup, login with JWT authentication
+- **Auth System** — Secure signup, login with JWT authentication                             
 
----
-
-## 🛠️ Tech Stack
+---                         
+              
+## 🛠️ Tech Stack                     
 
 | Layer | Technology |
 |---|---|
