@@ -38,11 +38,11 @@ Whether you're a student trying to understand a complex topic, a professional br
 | Frontend | React + Vite + React Flow |
 | Backend | Node.js + Express |
 | Database | MongoDB Atlas |
-| AI | Google Gemini Flash API |
-| Auth | JWT Tokens |
+| AI | Google Gemini Flash API |           
+| Auth | JWT Tokens |              
 | Animations | Framer Motion |
-| Deployment | Vercel (frontend) + Render (backend) |
-
+| Deployment | Vercel (frontend) + Render (backend) |                   
+                
 ---
 
 ## 🏗️ Architecture
