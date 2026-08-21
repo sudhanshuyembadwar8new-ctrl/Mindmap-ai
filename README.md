@@ -1,7 +1,7 @@
-# 🧠 MindMap AI
+# 🧠 MindMap AI         
 
-> **Think Visually. Learn Faster.**  
-> Generate beautiful, interactive AI-powered mind maps instantly.
+> **Think Visually. Learn Faster.**                   
+> Generate beautiful, interactive AI-powered mind maps instantly.                     
 
 🌐 **Live Demo:** [mindmap-ai-iota.vercel.app](https://mindmap-ai-iota.vercel.app)
 
