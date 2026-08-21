@@ -1,4 +1,4 @@
-# 🧠 MindMap AI         
+# 🧠 MindMap AI                     
 
 > **Think Visually. Learn Faster.**                   
 > Generate beautiful, interactive AI-powered mind maps instantly.                     
