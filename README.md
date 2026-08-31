@@ -4,7 +4,7 @@
 > Generate beautiful, interactive AI-powered mind maps instantly.                     
 
 🌐 **Live Demo:** [mindmap-ai-iota.vercel.app](https://mindmap-ai-iota.vercel.app)
-
+         
 ---
 
 ## 🚀 What is MindMap AI?
