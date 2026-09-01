@@ -7,7 +7,7 @@
          
 ---
 
-## 🚀 What is MindMap AI?
+## 🚀 What is MindMap AI?       
 
 MindMap AI is a full-stack AI-powered product that lets you type any topic and instantly generate a beautiful, interactive mind map. Built as a real product — not a student project.
 
